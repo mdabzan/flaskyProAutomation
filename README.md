@@ -1,2 +1,2 @@
 # flaskyProAutomation
-Automation framework for flaskyProAutomation
+Automation framework for flasky-pro app
