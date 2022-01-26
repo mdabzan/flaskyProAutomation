@@ -1,10 +1,25 @@
 import requests
 from nose.tools import assert_equal
 
-auth_token = 'JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDMwMDY5NTgsImlhdCI6MTY0MzAwNjY1OCwibmJmIjoxNjQzMDA2NjU4LCJpZGVudGl0eSI6MX0.xpvJuTLODKju-2u0DnO1X3cJXDvsqYz2UYOPGJqfGDQ'
+from apis.authentications.user_auth_api import AuthenticationsApi
 
-def test_get_all_items_list_200():
-    response = requests.get("http://127.0.0.1:5002/items", headers={'Authorization': auth_token})
-    print(response.json())
-    print(response.status_code)
-    assert_equal(response.status_code, 200)
+
+class TestRequest:
+
+    @classmethod
+    def setUpClass(cls):
+        cls.JWT = 'JWT '
+        cls.auth = AuthenticationsApi()
+
+    def test_get_all_items_list_200(self):
+        body = {"username": "ehya4", "password": "asdf"}
+        response = requests.get("http://127.0.0.1:5002/items",
+                                headers={'Authorization': self.auth.get_admin_token(body)})
+        print(response.json())
+        assert_equal(response.status_code, 200)
+
+    def test_get_all_items_list_401(self):
+        response = requests.get("http://127.0.0.1:5002/items",
+                                headers={'Authorization': 'INVALID'})
+        print(response.json())
+        assert_equal(response.status_code, 401)
