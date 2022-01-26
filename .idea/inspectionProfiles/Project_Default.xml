@@ -1,0 +1,33 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="5">
+            <item index="0" class="java.lang.String" itemvalue="pydoc-markdown" />
+            <item index="1" class="java.lang.String" itemvalue="apscheduler" />
+            <item index="2" class="java.lang.String" itemvalue="flask" />
+            <item index="3" class="java.lang.String" itemvalue="twilio" />
+            <item index="4" class="java.lang.String" itemvalue="psycopg2" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="tests.api.MessageService.ams_destinations.test_ams_destinations_create.AmsDestinationsCreateApiTests.*" />
+          <option value="tests.api.MessageService.ams_destinations.test_ams_destinations_delete.AmsDestinationsCreateApiTests.*" />
+          <option value="tests.api.MessageService.ams_destinations.test_ams_destinations_get.AmsDestinationsCreateApiTests.*" />
+          <option value="tests.api.MessageService.ams_destinations.test_ams_destinations_update.AmsDestinationsCreateApiTests.*" />
+          <option value="tests.api.MessageService.ams_destinations.test_ams_destinations_delete.AmsDestinationsDeleteApiTests.*" />
+          <option value="libs.api.UserService.factory.UserFactory.*" />
+          <option value="tests.api.UserService.DealerManagement.test_dealer_management_update_api.DealerManagementUpdateTest.*" />
+          <option value="tests.api.UserService.DealerManagement.test_dealer_device_management_api.DealerManagementCreateTest.*" />
+          <option value="tests.api.GroupsAndScenesService.test_gss_collections_delete.GssGroupCollectionsCreateTest.*" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
